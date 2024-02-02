@@ -24,12 +24,17 @@ tab.addEventListener('click', function(e){
 
 //delete done job
 btn_del.addEventListener('click', function(e){
-    data.forEach(function(item, index){        
-        if (item.checked == "checked"){
-            data.splice(index, 1);
-        }
-                    
+    e.preventDefault();
+    let undo_job = data.filter(function(item){
+        return item.checked !== "checked";
     })
+    data = undo_job;
+    // data.forEach(function(item, index){        
+    //     if (item.checked == "checked"){
+    //         data.splice(index, 1);
+    //     }
+                    
+    // })
     tabDefault();
     renderData(data);
 })
@@ -63,10 +68,11 @@ function tabDefault(){
 
 //add job
 btn_add.addEventListener('click', function(e){
-    if (txt.value == "" ){
+    e.preventDefault();
+    if (txt.value.trim() == "" ){
         alert("請輸入代辦事項！");
         return;
-    }
+    }    
     let item = {};
     item.content = txt.value;
     item.checked = "";

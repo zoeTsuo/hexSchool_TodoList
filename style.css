@@ -114,6 +114,7 @@ input[type="text"] {
   li {
     position: relative;
     padding-right: 2rem;
+    list-style: none;
     @media (max-width: 575px) {
       padding-right: 0;
     }
