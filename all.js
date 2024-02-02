@@ -29,12 +29,6 @@ btn_del.addEventListener('click', function(e){
         return item.checked !== "checked";
     })
     data = undo_job;
-    // data.forEach(function(item, index){        
-    //     if (item.checked == "checked"){
-    //         data.splice(index, 1);
-    //     }
-                    
-    // })
     tabDefault();
     renderData(data);
 })
