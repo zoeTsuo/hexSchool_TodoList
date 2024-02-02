@@ -65,10 +65,11 @@ btn_add.addEventListener('click', function(e){
     e.preventDefault();
     if (txt.value.trim() == "" ){
         alert("請輸入代辦事項！");
+        txt.value = "";
         return;
     }    
     let item = {};
-    item.content = txt.value;
+    item.content = txt.value.trim();
     item.checked = "";
     data.push(item);
     tabDefault();
