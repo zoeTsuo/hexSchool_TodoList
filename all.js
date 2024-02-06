@@ -19,7 +19,9 @@ renderData(data);
 
 //select tab for filter job
 tab.addEventListener('click', function(e){
-    tabShow(e.target);
+    if (e.target.nodeName == "LI"){
+        tabShow(e.target);
+    }
 })
 
 //delete done job

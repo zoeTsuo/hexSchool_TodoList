@@ -87,6 +87,9 @@ input[type="text"] {
   text-align: center;
   color: #9f9a91;
   font-size: 14px;
+  list-style: none;
+  margin-left: -2.1rem;
+  margin-right: 0.5rem;
   li {
     padding: 1rem;
     width: 100%;
@@ -97,10 +100,12 @@ input[type="text"] {
       font-weight: bold;
       &:hover {
         background: white;
+        color: #000000;
       }
     }
     &:hover {
         background: lightgrey;
+        color: #e08c2c;
     }
   }  
 }
